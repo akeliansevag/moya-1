@@ -11,9 +11,9 @@
 
             <!-- Mobile Menu Toggle Icon -->
             <div id="nav-toggle" class="block lg:hidden rounded cursor-pointer" :class="{ toggled: isNavOpen }" dir="rtl" @click="toggleNav">
-                <div class="line1 w-[20px] h-[3px] bg-white rounded-2xl transition-all duration-300 ease-in-out"></div>
-                <div class="line2 my-1 w-3/4 h-[3px] bg-white rounded-2xl transition-all duration-300 ease-in-out"></div>
-                <div class="line3 w-[20px] h-[3px] bg-white rounded-2xl transition-all duration-300 ease-in-out"></div>
+                <div class="line1 w-[20px] h-[3px] bg-white rounded-3xl transition-all duration-300 ease-in-out"></div>
+                <div class="line2 my-1 w-3/4 h-[3px] bg-white rounded-3xl transition-all duration-300 ease-in-out"></div>
+                <div class="line3 w-[20px] h-[3px] bg-white rounded-3xl transition-all duration-300 ease-in-out"></div>
             </div>
         </div>
 
@@ -37,26 +37,29 @@
             links: [
                 {
                     title: "Core Network",
+                    path: "solutions/core-network",
                     subLinks: [
-                        { title: "MNO Solution", path: "solutions/core-network/mno-solution" },
-                        { title: "FWA Solution", path: "solutions/core-network/fwa-solution" },
-                        { title: "Enterprise Solution", path: "solutions/core-network/enterprise-solution" }
+                        { title: "MNO Solution", path: "mno-solution" },
+                        { title: "FWA Solution", path: "fwa-solution" },
+                        { title: "Enterprise Solution", path: "enterprise-private-network-solution" }
                     ]
                 },
                 {
-                    title: "RAN",
+                    title: "4G/5G RAN",
+                    path: "solutions/4g5g-ran",
                     subLinks: [
-                        { title: "Dense Area Solution", path: "solutions/ran/dense-area-solution" },
-                        { title: "Rural Area Solution", path: "solutions/ran/rural-area-solution" },
-                        { title: "Indoor Solution", path: "solutions/ran/indoor-solution" }
+                        { title: "Dense Area Solution", path: "dense-area-solution" },
+                        { title: "Rural Area Solution", path: "rural-area-solution" },
+                        { title: "Indoor Solution", path: "indoor-solution" }
                     ]
                 },
                 {
                     title: "Repeater",
+                    path: "solutions/repeater",
                     subLinks: [
-                        { title: "Fiber Solution", path: "solutions/repeater/fiber-solution" },
-                        { title: "Wireless Solution", path: "solutions/repeater/wireless-solution" },
-                        { title: "ICS Wireless Solution", path: "solutions/repeater/ics-wireless-solution" }
+                        { title: "Fiber Solution", path: "fiber-solution" },
+                        { title: "Wireless Solution", path: "wireless-solution" },
+                        { title: "ICS Wireless Solution", path: "ics-wireless-solution" }
                     ]
                 }
             ]
@@ -66,34 +69,43 @@
             clickable: false,
             links: [
                 {
-                    title: "Network",
+                    title: "Core Network",
+                    path: "products/core-network",
+                    clickable: false,
                     subLinks: [
-                        { title: "Moya EPC", path: "products/core-network/mno-solution" },
-                        { title: "Moya IMS", path: "products/core-network/fwa-solution" },
+                        { title: "EPC", path: "evolved-packet-core" },
+                        { title: "IMS", path: "ip-multimedia-subsystem" },
                     ]
                 },
                 {
-                    title: "RAN Product",
+                    title: "4G/5G RAN",
+                    path: "products/4g5g-ran",
+                    clickable: false,
                     subLinks: [
-                        { title: "BBU - RRU - pHUB", path: "products/ran-products/bbu-rru-phub" },
-                        { title: "Integrated eNB", path: "products/ran-products/integrated-enb" },
-                        { title: "Femtocell", path: "products/ran-products/femtocell" }
+                        { title: "BBU", path: "baseband-unit" },
+                        { title: "RRU", path: "remote-radio-unit" },
+                        { title: "Integrated eNB", path: "integrated-enb" },
+                        { title: "Femtocell", path: "femtocell" }
                     ]
                 },
                 {
                     title: "Repeater",
+                    path: "products/repeater",
+                    clickable: false,
                     subLinks: [
-                        { title: "Fiber Repeater", path: "products/repeater/fiber-solution" },
-                        { title: "Wireless Repeater", path: "products/repeater/wireless-Repeater" },
-                        { title: "ICS Wireless Repeater", path: "products/repeater/ics-wireless-Repeater" }
+                        { title: "Fiber", path: "fiber-repeater" },
+                        { title: "Wireless", path: "wireless-repeater" },
+                        { title: "ICS Wireless", path: "ics-wireless-repeater" }
                     ]
                 },
                 {
                     title: "Antenna",
+                    path: "products/antenna",
+                    clickable: false,
                     subLinks: [
-                        { title: "Omni Antenna", path: "products/repeater/omni-antenna" },
-                        { title: "Cluster Antenna", path: "products/repeater/cluster-antenna" },
-                        { title: "Panel Antenna", path: "products/repeater/panel-antenna" }
+                        { title: "Omni Fiberglass", path: "omni-fiberglass-antenna" },
+                        { title: "Omni Cluster", path: "omni-cluster-antenna" },
+                        { title: "Panel", path: "panel-antenna" }
                     ]
                 }
             ]

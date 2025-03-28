@@ -1,0 +1,142 @@
+<template>
+    <section v-if="solutionData" class="my-12 py-12">
+		<div class="container">
+			<ul class="flex items-center gap-2 text-xs">
+				<li><NuxtLink to="/">Home</NuxtLink></li>
+				<li class="flex"><Icon name="fa6-solid:angle-right" /></li>
+				<li>Solutions</li>
+				<li class="flex"><Icon name="fa6-solid:angle-right" /></li>
+				<li>{{ categoryData.title }}</li>
+				<li class="flex"><Icon name="fa6-solid:angle-right" /></li>
+				<li>{{ solutionData.title }}</li>
+			</ul>
+
+			<h1 class="text-3xl lg:text-5xl font-semibold mt-4">{{ solutionData.title }}</h1>
+
+			<div class="relative pt-12 pb-0 px-4 lg:py-24 lg:px-14 text-white rounded-3xl mt-12 bg-gradient-to-b from-[#000000] from-40% to-[#2B6FF6] to-100%">
+				<div class="flex flex-col gap-8 lg:w-1/2">
+					<h2 class="text-3xl lg:text-5xl font-semibold">{{ categoryData.sub_title }}</h2>
+					<p class="text-sm" v-html="categoryData.description"></p>
+					<NuxtLink to="/">
+						<button class="p-4 min-w-[120px] text-sm border border-white text-white bg-transparent hover:border-black hover:text-black hover:bg-white rounded-full select-none transition-all duration-300 ease-in-out">Get a Quote</button>
+					</NuxtLink>
+				</div>
+                <div class="w-full lg:w-1/2 relative lg:absolute bottom-0 right-0 max-lg:mt-12">
+					<NuxtImg class="ml-auto w-full 2xl:w-4/5 4xl:w-3/5" :src="`/images/${solutionData.image}.png`" alt="" width="" height="" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <section v-if="solutionData" class="my-12 py-12">
+		<div class="container">
+            <div class="flex max-lg:flex-col lg:items-center gap-12">
+                <div class="lg:w-3/5">
+                    <h2 class="text-2xl font-bold">{{ solutionData.sub_title }}</h2>
+                    <p class="text-sm text-[#ACA8A8] mt-4" v-html="solutionData.description"></p>
+                </div>
+                <div class="lg:w-2/5 flex flex-col justify-center gap-12 bg-[#F8F8F9] p-12 rounded-3xl">
+                    <div v-for="(feature, index) in solutionData.features" :key="index" class="flex items-center gap-12">
+                        <NuxtImg class="flex-shrink-0" :src="`images/icons/${feature.icon}.svg`" :alt="feature.title" width="62" height="62" />
+                        <h2 class="text-lg lg:text-xl font-semibold">{{ feature.title }}</h2>
+                    </div>
+                </div>
+            </div>
+
+            <NuxtImg class="w-full my-12 py-12" :src="`images/${solutionData.image1}.png`" :alt="solutionData.title" width="2292" height="1482" />
+		</div>
+    </section>
+ 
+    <section v-if="solutionData" class="py-12 bg-[#F8F8F9]">
+        <div class="container">
+            <div class="py-24 px-4 lg:px-14 text-white rounded-3xl mt-12 bg-[url('/images/solutions-category-bg.png')] bg-cover bg-center">
+                <div class="flex flex-col items-center text-center gap-8 lg:w-1/2 mx-auto">
+                    <h3 class="text-sm uppercase">Key Benefits</h3>
+                    <h2 class="text-xl lg:text-3xl font-semibold">{{ solutionData.benefits.title }}</h2>
+                </div>
+                <div class="flex max-lg:flex-col justify-between gap-4 lg:gap-12 w-full xl:w-4/5 mx-auto mt-12 lg:mt-24 text-center">
+                    <h4 v-for="(item, index) in solutionData.benefits.items" :key="index" class="p-4 lg:p-8 border rounded-3xl text-xl lg:text-3xl font-semibold flex items-center justify-center">{{ item }}</h4>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-between gap-8 my-12 py-12">
+                <div>
+                    <h4 class="text-sm">Application Scenario</h4>
+                    <h2 class="text-xl lg:text-3xl font-semibold mt-4">Tailored Scenario for Every Challenge</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 lg:gap-4 text-center">
+                    <div v-for="(scenario, index) in solutionData.application_scenario" :key="index" class="relative">
+                        <NuxtImg class="w-full" :src="`/images/${scenario.image}.png`" :alt="scenario.title" width="366" height="342" />
+                        <h2 class="absolute bottom-10 left-10 text-2xl font-bold text-white mt-4">{{ scenario.title }}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section v-if="solutionData" class="mt-12 pt-12 pb-56">
+        <div class="container">
+            <div class="flex flex-col gap-24 mt-24">
+				<h3 class="text-xl lg:text-3xl font-semibold text-center">Included Products</h3>
+				<div class="grid lg:grid-cols-3 gap-12">
+					<div v-for="(product, productIndex) in solutionData.products" :key="productIndex" class="flex flex-col justify-between items-center gap-12 py-12 px-4 lg:px-8 text-center bg-[#F8F8F9] rounded-3xl">
+						<div class="flex flex-col justify-center items-center gap-4 w-full">
+							<NuxtImg class="w-full" :src="`/images/${product.image}.png`" :alt="product.title" width="" height="" />
+							<h3 class="text-sm mt-6">{{ product.sub_title }}</h3>
+							<NuxtLink :to="`/products/${slugify(product.category)}/${slugify(product.sub_category)}/${slugify(product.title)}`">
+								<h2 class="text-2xl font-BankGothic font-bold">{{ product.title }}</h2>
+							</NuxtLink>
+						</div>
+						<div class="flex gap-4">
+							<NuxtLink to="/">
+								<button class="p-4 min-w-[120px] text-sm text-white bg-primary hover:text-white hover:bg-black rounded-full select-none transition-all duration-300 ease-in-out">Get a Quote</button>
+							</NuxtLink>
+							<NuxtLink class="flex lg:justify-between items-center gap-2 text-base text-primary">
+								<button class="transition-all duration-300 ease-in-out text-nowrap">Learn More</button>
+								<Icon name="fa6-solid:angle-right" class="transition duration-300 ease-in-out group-hover:translate-x-1" />
+							</NuxtLink>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </section>
+
+</template>
+
+<script setup>
+    import slugify from "@/utils/slugify";
+	import categories from '~/data/solutions';
+
+    const route = useRoute();
+    const categorySlug = ref(route.params.category);
+    const solutionSlug = ref(route.params.solution);
+    const categoryData = ref(null);
+    const solutionData = ref(null);
+
+    onMounted(() => {
+        // Find the main category
+        categoryData.value = categories.find(cat => slugify(cat.title) === categorySlug.value);
+        if (!categoryData.value) return;
+        // Find the solution within the category
+        solutionData.value = categoryData.value.solutions.find(s => slugify(s.title) === solutionSlug.value) || null;
+    });
+
+    // // Update SEO metadata dynamically when categoryData is available
+    // watchEffect(() => {
+    //     if (categoryData.value && subCategoryData.value && productData.value) {
+    //         useSeoMeta({
+    //             title: `${productData.value.title} - ${subCategoryData.value.title} - ${categoryData.value.title}`,
+    //             description: `Discover ${productData.value.title} solutions and services.`,
+                
+    //             ogTitle: `${productData.value.title} - ${subCategoryData.value.title} - ${categoryData.value.title}`,
+    //             ogDescription: `Explore top solutions in ${productData.value.title}.`,
+    //             ogImage: productData.value.image || '',
+
+    //             twitterTitle: `${productData.value.title} - ${subCategoryData.value.title} - ${categoryData.value.title}`,
+    //             twitterDescription: `Explore ${productData.value.title} for innovative solutions.`,
+    //             twitterCard: 'summary_large_image',
+    //         });
+    //     }
+    // });
+</script>

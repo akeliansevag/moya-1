@@ -16,45 +16,45 @@ export default defineNuxtConfig({
 				{
 					rel: "icon",
 					type: "image/png",
-					href: "http://92.205.130.62:5000/images/favicon-64x64.png",
+					href: "http://moya.localhost/images/favicon-64x64.png",
 				},
 				{
 					rel: "icon",
 					type: "image/png",
-					href: "http://92.205.130.62:5000/images/favicon-32x32.png",
+					href: "http://moya.localhost/images/favicon-32x32.png",
 				},
 				{
 					rel: "icon",
 					type: "image/png",
-					href: "http://92.205.130.62:5000/images/favicon-16x16.png",
+					href: "http://moya.localhost/images/favicon-16x16.png",
 				},
 				{
 					rel: "apple-touch-icon",
 					type: "image/png",
-					href: "http://92.205.130.62:5000/images/apple-touch-icon-180x180.png",
+					href: "http://moya.localhost/images/apple-touch-icon-180x180.png",
 				},
 				{
 					rel: "mask-icon",
-					href: "http://92.205.130.62:5000/images/icons/mask-icon.svg",
+					href: "http://moya.localhost/images/icons/mask-icon.svg",
 					color: "#32393C",
 				},
 				{
 					rel: "icon",
 					sizes: "192x192",
-					href: "http://92.205.130.62:5000/images/android-chrome-192x192.png",
+					href: "http://moya.localhost/images/android-chrome-192x192.png",
 				},
 				{
 					rel: "icon",
 					sizes: "512x512",
-					href: "http://92.205.130.62:5000/images/android-chrome-512x512.png",
+					href: "http://moya.localhost/images/android-chrome-512x512.png",
 				},
 			],
 			meta: [
 				{ name: "theme-color", content: "#32393C" },
 				{ name: "format-detection", content: "telephone=no" },
-				{ name: "author", content: "Moya Europe" },
-				{ name: "og:site_name", content: "Moya Europe" },
-				{ name: "og:image:alt", content: "Moya Europe" },
+				{ name: "author", content: "Moya" },
+				{ name: "og:site_name", content: "Moya" },
+				{ name: "og:image:alt", content: "Moya" },
 				{ name: "og:image:width", content: "1200" },
 				{ name: "og:image:height", content: "630" },
 				{ name: "mobile-web-app-capable", content: "yes" },
@@ -71,7 +71,7 @@ export default defineNuxtConfig({
 						"name": "Moya",
 						"url": "https://www.moya.com",
 						"description": "",
-						"logo": "http://92.205.130.62:5000/images/logo.svg", // png
+						"logo": "http://moya.localhost/images/logo.svg", // png
 						"sameAs": [
 							"https://www.facebook.com/moya",
 							"https://x.com/moyaapp",
@@ -87,7 +87,7 @@ export default defineNuxtConfig({
 		},
 		//pageTransition: { name: 'page', mode: 'out-in' }
 	},
-	modules: ['@nuxtjs/tailwindcss', "@nuxt/image", "@nuxt/icon", "nuxt-swiper"],
+	modules: ['@nuxtjs/tailwindcss', "@nuxt/image", "@nuxt/icon", "nuxt-swiper", "@nuxt/scripts"],
 	image: {
 		provider: "twicpics",
 	},

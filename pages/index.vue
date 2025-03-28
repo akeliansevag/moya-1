@@ -1,23 +1,23 @@
 <template>
-    <section class="h-[calc(100vh-var(--header-height))] bg-black text-white flex items-center relative">
+    <section class="h-[calc(100vh-var(--header-height))] flex items-center relative bg-black">
         <div class="absolute bottom-0 left-0 w-full z-[1]">
             <NuxtImg class="mix-blend-color-dodge w-full" src="/images/main-banner.png" alt="" width="1444" height="309" />
         </div>
         <div class="absolute bottom-0 right-0 w-full lg:w-2/3 z-[2]">
-            <NuxtImg class="w-full" src="/images/antenna-final1.gif" alt="" width="1444" height="309" />
+            <NuxtImg class="w-full" src="/images/antenna.gif" alt="" width="1444" height="309" />
         </div>
         <div class="container">
-            <div class="relative flex flex-col gap-8 lg:w-2/5 z-[3] max-lg:-mt-48">
-                <h1 class="text-5xl font-bold">Connecting Your <span class="text-primary">World Everywhere</span></h1>
+            <div class="relative flex flex-col gap-8 lg:w-2/5 max-lg:items-center text-white max-lg:text-center z-[3] max-lg:-mt-48">
+                <h1 class="text-2xl lg:text-5xl font-bold">Connecting Your <span class="text-primary">World Everywhere</span></h1>
                 <p class="text-sm text-[#ACA8A8]">Stay connected effortlessly with our reliable telecom solutions, ensuring seamless communication anytime, anywhere. Experience high-speed networks, crystal-clear calls, and innovative services.</p>
                 
                 <div class="flex gap-4">
                     <NuxtLink to="/">
-                        <button class="py-2 px-6 text-sm text-black bg-white hover:text-white hover:bg-primary rounded-full select-none transition-all duration-300 ease-in-out">Explore</button>
+                        <button class="p-4 min-w-[120px] text-sm text-black bg-white hover:text-white hover:bg-primary rounded-full select-none transition-all duration-300 ease-in-out">Explore</button>
                     </NuxtLink>
 
                     <NuxtLink to="/contact-us">
-                        <button class="py-2 px-6 text-sm text-white bg-primary hover:text-black hover:bg-white rounded-full select-none transition-all duration-300 ease-in-out">Contact Us</button>
+                        <button class="p-4 min-w-[120px] text-sm text-white bg-primary hover:text-black hover:bg-white rounded-full select-none transition-all duration-300 ease-in-out">Contact Us</button>
                     </NuxtLink>
                 </div>
             </div>
@@ -26,10 +26,10 @@
 
     <section class="py-12 bg-[#F8F8F9]">
         <div class="container">
-            <h2 class="text-center text-xl font-semibold">Trusted by Top Companies Worlwide</h2>
+            <h2 class="text-center text-base lg:text-xl font-semibold">Trusted by Top Companies Worlwide</h2>
         </div>
 
-        <div class="marquee overflow-hidden">
+        <!-- <div class="marquee overflow-hidden">
             <div class="wrapper grid grid-flow-col auto-cols-[10rem] lg:auto-cols-[15rem] justify-items-center items-center mt-10 lg:my-10 animate-[marquee_20s_linear_infinite] lg:animate-[marqueelg_20s_linear_infinite]">
                 <template v-for="(marquee, index) in duplicatedMarqueeList" :key="index">
                     <a :href="marquee.link" target="_blank">
@@ -37,123 +37,181 @@
                     </a>
                 </template>
             </div>
-        </div>
+        </div> -->
     </section>
     
     <section class="my-12 py-12">
         <div class="container">
             <div class="flex flex-col gap-4">
-                <h2 class="text-5xl font-semibold">Moya's Solutions</h2>
-                <h3 class="text-2xl font-semibold">Your Trusted Telecom Partner</h3>
+                <h2 class="text-2xl lg:text-5xl font-semibold">Moya's Solutions</h2>
+                <h3 class="text-xl lg:text-2xl font-semibold">Your Trusted Telecom Partner</h3>
             </div>
-
-            <swiper-container 
-                :slides-per-view="1.2" 
-                :speed="1000"
-                :space-between="25"
-                :grabCursor="true"
-                :scrollbar="true"
-                class="mt-14"
-            >
-                <!-- :centered-slides="true" -->
-                <swiper-slide v-for="(solution, index) in solutions" :key="index">
-                    <NuxtLink to="/solutions" :class="`group block relative py-12 px-4 lg:px-8 rounded-2xl aspect-[3/4] lg:aspect-video bg-gradient-to-b from-[#000000] from-40% to-[${solution.color}] to-100%`">
-                        <div class="absolute bottom-0 max-lg:left-1/2 max-lg:-translate-x-1/2 lg:right-24 w-3/5 lg:w-2/5">
-                            <NuxtImg :src="`images/${solution.image}.png`" :alt="solution.title" :width="solution.width" :height="solution.height" />
+            <ClientOnly>
+                <swiper-container 
+                    :slides-per-view="1.2" 
+                    :speed="1000"
+                    :space-between="25"
+                    :grabCursor="true"
+                    :scrollbar="true"
+                    :breakpoints="{
+                        1280: {
+                            slidesPerView:3
+                        },
+                        1024: {
+                            slidesPerView:2 
+                        }
+                    }"
+                    class="mt-14"
+                >
+                    <!-- :centered-slides="true" -->
+                    <swiper-slide v-for="(solution, index) in solutions" :key="index" :class="`h-auto flex flex-col items-between justify-between gap-12 group block relative rounded-3xl aspect-[3/4] lg:aspect-video bg-gradient-to-b from-[#000000] from-40% to-[${solution.color}] to-100%`">
+                        <div class="flex flex-col pt-12 px-4 lg:px-12 text-white">
+                            <h2 class="text-base font-semibold">{{ solution.category }}</h2>
+                            <h3 class="text-2xl lg:text-3xl font-semibold mt-4">{{ solution.title }}</h3>
+                            <NuxtLink to="/">
+                                <button class="flex items-center gap-2 mt-8 py-4 px-6 min-w-[120px] text-sm border border-white text-white bg-transparent hover:border-black hover:text-black hover:bg-white rounded-full select-none transition-all duration-300 ease-in-out group">
+                                    Learn More
+                                    <Icon name="fa6-solid:angle-right" class="transition duration-300 ease-in-out group-hover:translate-x-1" />
+                                </button>
+                            </NuxtLink>
                         </div>
-                        <div class="flex max-lg:flex-col lg:justify-between lg:items-end gap-4 h-full text-white">
-                            <h3 class="text-4xl font-semibold">{{ solution.title }}</h3>
-                            <div class="flex lg:justify-between items-center gap-2 text-base">
-                                <button class="transition-all duration-300 ease-in-out">Learn More</button>
-                                <Icon name="fa6-solid:angle-right" class="transition duration-300 ease-in-out group-hover:translate-x-1" />
-                            </div>
-                        </div>
-                    </NuxtLink>
-                </swiper-slide>
-            </swiper-container>
+                        <NuxtImg class="w-full" :src="`images/${solution.image}.png`" :alt="solution.title" :width="solution.width" :height="solution.height" />
+                    </swiper-slide>
+                </swiper-container>
+            </ClientOnly>
         </div>
     </section>
 
     <section class="mt-12 py-24 bg-[#F8F8F9]">
         <div class="container">
             <div class="flex flex-col gap-4">
-                <h2 class="text-5xl font-semibold">Moya's Solutions</h2>
-                <h3 class="text-2xl font-semibold">Your Trusted Telecom Partner</h3>
+                <h2 class="text-2xl lg:text-5xl font-semibold">Moya's Solutions</h2>
+                <h3 class="text-xl lg:text-2xl font-semibold">Your Trusted Telecom Partner</h3>
             </div>
 
-            <swiper-container 
-                :slides-per-view="1.2" 
-                :speed="1000"
-                :loop="true"
-                :autoplay="{ delay: 5000 }"
-                :space-between="25"
-                :grabCursor="true"
-                :breakpoints="{
-                    1024: {
-                        slidesPerView:3.2 
-                    },
-                    640: {
-                        slidesPerView:2.2 
-                    }
-                }"
-                class="mt-14"
-            >
-                <!-- :centered-slides="true" -->
-                <swiper-slide v-for="(value, index) in values" :key="index" class="flex flex-col gap-8 h-auto p-4 rounded-2xl bg-white">
-                    <NuxtImg :src="`images/icons/${value.icon}.svg`" :alt="value.title" width="42" height="42" />
-                    <h3 class="text-2xl font-semibold">{{ value.title }}</h3>
-                    <p class="text-[#ACA8A8]">{{ value.description }}</p>
-                </swiper-slide>
-            </swiper-container>  
+            <ClientOnly>
+                <swiper-container 
+                    :slides-per-view="1.2" 
+                    :speed="1000"
+                    :loop="true"
+                    :autoplay="{ delay: 5000 }"
+                    :space-between="25"
+                    :grabCursor="true"
+                    :breakpoints="{
+                        1280: {
+                            slidesPerView:4.2 
+                        },
+                        1024: {
+                            slidesPerView:3.2 
+                        },
+                        640: {
+                            slidesPerView:2.2 
+                        }
+                    }"
+                    class="mt-14"
+                >
+                    <!-- :centered-slides="true" -->
+                    <swiper-slide v-for="(value, index) in values" :key="index" class="flex flex-col gap-8 h-auto p-4 lg:p-8 rounded-3xl bg-white">
+                        <NuxtImg :src="`images/icons/${value.icon}.svg`" :alt="value.title" width="42" height="42" />
+                        <h3 class="text-2xl font-semibold">{{ value.title }}</h3>
+                        <p class="text-[#ACA8A8]">{{ value.description }}</p>
+                    </swiper-slide>
+                </swiper-container>  
+            </ClientOnly>
         </div>
     </section>
 
-    <!-- <section class="py-56 text-white bg-gradient-to-b from-[#F8F8F9] from-50% to-white to-50%">
+    <section class="md:pt-32 xl:pt-56 pb-24 text-white bg-gradient-to-b from-[#F8F8F9] from-50% to-white to-50%">
         <div class="container">
-            <div class="relative flex lg:justify-end items-center py-12 lg:px-8 px-4 bg-primary rounded-2xl aspect-square lg:aspect-[22/9]">
-                <div class="absolute bottom-0 right-0 lg:left-24 w-1/3 lg:w-1/2">
+            <div class="relative flex md:justify-end md:items-center py-12 px-4 md:px-8 bg-primary rounded-3xl md:aspect-[24/9]">
+                <div class="hidden md:block absolute bottom-0 left-0 w-1/2 lg:w-2/5">
                     <NuxtImg src="/images/have-questions-talk-to-us.png" alt="" width="" height="" />
-                </div>
-
-                <div class="absolute top-0 left-0 w-full h-full">
-                    <NuxtImg class="w-full h-full object-cover mix-blend-color-burn" src="/images/have-questions-talk-to-us-bg.png" alt="" width="" height="" />
-                </div>
-
-                <div class="flex flex-col gap-4 lg:-translate-x-32">
-                    <h2 class="text-5xl font-semibold">Have Questions?<br />Talk To Us</h2>
-                    <p class="text-sm">Get in touch with us at Moya easily!<br />Whether you have questions or need assistance.</p>
-                    <NuxtLink to="/">
-                        <button class="py-2 px-6 text-sm text-black bg-white hover:text-white hover:bg-primary rounded-full select-none transition-all duration-300 ease-in-out">Get in Touch</button>
-                    </NuxtLink>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <section class="py-24 text-white bg-gradient-to-b from-[#F8F8F9] from-50% to-white to-50%">
-        <div class="container">
-            <div class="relative flex lg:justify-end lg:items-center py-12 px-4 lg:px-8 bg-primary rounded-2xl aspect-[3/4] lg:aspect-[24/9]">
-                <div class="absolute bottom-0 max-lg:left-1/2 max-lg:-translate-x-1/2 lg:left-24 w-2/5">
-                    <NuxtImg src="/images/have-questions-talk-to-us1.png" alt="" width="" height="" />
                 </div>
                 
                 <div class="absolute top-0 left-0 w-full h-full">
                     <NuxtImg class="w-full h-full object-cover mix-blend-color-burn" src="/images/have-questions-talk-to-us-bg.png" alt="" width="" height="" />
                 </div>
 
-                <div class="flex flex-col gap-4 max-lg:w-full lg:-translate-x-32">
-                    <h2 class="text-5xl font-semibold">Have Questions?<br />Talk To Us</h2>
+                <div class="flex flex-col gap-4 md:w-1/2">
+                    <h2 class="text-2xl md:text-5xl font-semibold">Have Questions?<br />Talk To Us</h2>
                     <p class="text-sm">Get in touch with us at Moya easily!<br />Whether you have questions or need assistance.</p>
                     <NuxtLink to="/">
-                        <button class="py-2 px-6 text-sm text-black bg-white hover:text-white hover:bg-primary rounded-full select-none transition-all duration-300 ease-in-out">Get in Touch</button>
+                        <button class="p-4 min-w-[120px] text-sm text-black bg-white hover:text-white hover:bg-black rounded-full select-none transition-all duration-300 ease-in-out">Get in Touch</button>
                     </NuxtLink>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="mt-12 py-24">
+        <div class="container">
+            <div class="flex flex-col gap-4">
+                <h2 class="text-2xl lg:text-5xl font-semibold">Moya's Products</h2>
+                <h3 class="text-xl lg:text-2xl font-semibold">Empowering Connections with Every Product</h3>
+            </div>
+            <div class="flex max-lg:flex-col flex-row justify-between lg:items-center gap-4 mt-12 overflow-scroll">
+                <div class="flex gap-2">
+                    <div @click="handleCategory(index)" v-for="(category, index) in categories" :key="index" class="py-2 px-6 border rounded-full cursor-pointer text-nowrap" :class="activeCategory === index ? 'bg-primary text-white' : ''">{{ category.title }}</div>
+                </div>
+
+                <!-- <NuxtLink v-if="showExplore" :to="exploreLink" class="hidden lg:flex lg:justify-between items-center gap-2 text-base text-primary">
+                    <button class="transition-all duration-300 ease-in-out">Explore All</button>
+                    <Icon name="fa6-solid:arrow-right" class="transition duration-300 ease-in-out group-hover:translate-x-1" />
+                </NuxtLink> -->
+            </div>
+            <div class="mt-12">
+                <div v-for="(category, index) in categories" :key="index" class="element flex flex-col gap-4" :class="activeCategory === index ? 'block' : 'hidden'">
+                    <div class="grid lg:grid-cols-3 gap-4 rounded-3xl">
+                        <template v-if="category.sub_categories.length">
+                            <div v-for="(product, productIndex) in getThreeProducts(category.sub_categories)" :key="productIndex" class="flex flex-col justify-between items-center gap-12 py-12 px-4 lg:px-8 text-center bg-[#F8F8F9] rounded-3xl">
+                                <div class="flex flex-col justify-center items-center gap-4">
+                                    <NuxtImg class="w-full" :src="`/images/${product.image}.png`" :alt="product.title" width="" height="" />
+                                    <h3 class="text-sm">{{ product.sub_title }}</h3>
+                                    <NuxtLink :to="`/products/${slugify(category.title)}/${slugify(product.title)}`">
+                                        <h2 class="text-3xl font-BankGothic font-bold">{{ product.title }}</h2>
+                                    </NuxtLink>
+                                </div>
+                                <div class="flex gap-4">
+                                    <NuxtLink to="/">
+                                        <button class="p-4 min-w-[120px] text-sm text-white bg-primary hover:text-white hover:bg-black rounded-full select-none transition-all duration-300 ease-in-out">Get a Quote</button>
+                                    </NuxtLink>
+                                    <NuxtLink class="flex lg:justify-between items-center gap-2 text-base text-primary">
+                                        <button class="transition-all duration-300 ease-in-out">Learn More</button>
+                                        <Icon name="fa6-solid:angle-right" class="transition duration-300 ease-in-out group-hover:translate-x-1" />
+                                    </NuxtLink>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <NuxtLink v-if="showExplore" :to="exploreLink" class="lg:hidden flex lg:justify-between items-center gap-2 text-base text-primary mx-auto text-center mt-4">
+                <button class="transition-all duration-300 ease-in-out">Explore All</button>
+                <Icon name="fa6-solid:arrow-right" class="transition duration-300 ease-in-out group-hover:translate-x-1" />
+            </NuxtLink> -->
+        </div>
+    </section>
+
+    <section class="mt-12 pt-24 pb-56 bg-[#F8F8F9] text-center">
+		<div class="container">
+			<h2 class="text-2xl lg:text-5xl font-semibold">The Heart of Moya: <br /> Our Core Identity and Vision</h2>
+			<div class="grid lg:grid-cols-3 gap-8 w-4/5 mx-auto mt-12 lg:mt-24">
+				<div v-for="(identity, index) in identities" :key="index" class="flex flex-col items-center gap-4">
+					<NuxtImg :src="`images/icons/${identity.icon}.svg`" :alt="identity.title" width="42" height="42" />
+					<h3 class="text-2xl font-semibold">{{ identity.title }}</h3>
+					<p class="text-sm text-[#ACA8A8]" v-html="identity.description"></p>
+				</div>
+			</div>
+		</div>
+	</section>
 </template>
 
 <script setup>
+	import { ClientOnly } from '#components';
+import categories from '~/data/products';
+    import slugify from '~/utils/slugify';
+    
     useSeoMeta({
         title: 'Hompepage',
         description: '',
@@ -166,6 +224,50 @@
         twitterDescription: '',
         twitterCard: 'summary_large_image',
     })
+    
+    const activeCategory = ref(0);
+    // const showExplore = ref(false);
+    // const exploreLink = ref("/");
+
+    // const handleCategory = (index) => {
+    //     activeCategory.value = index;
+    //     const subCategories = categories[index]?.sub_categories || [];
+    //     showExplore.value = subCategories.length > 1;
+    //     exploreLink.value = subCategories.length > 0 ? `products/${categories[index].title.toLowerCase()}` : "/";
+    // }
+
+    // const showExplore = ref(true);
+    // const exploreLink = ref("/");
+
+    const handleCategory = (index) => {
+        activeCategory.value = index;
+        const subCategories = categories[index]?.sub_categories || [];
+        // showExplore.value = subCategories.length > 1;
+        exploreLink.value = `products/${slugify(categories[index].title)}`;
+    }
+    
+    // // Set the initial explore link when the component is mounted
+    // onMounted(() => {
+    //     if (categories.length > 0) {
+    //         exploreLink.value = `products/${slugify(categories[0].title)}`;
+    //     }
+    // });
+
+    const getThreeProducts = (subCategories) => {
+        // Limit to the first 3 subcategories
+        
+        subCategories = subCategories.slice(0, 3);
+        // Step 1: Pick one product from each subcategory
+        let products = subCategories.flatMap((sub) => sub.products.slice(0, 1));
+
+        // Step 2: If we still have less than 3 products, get extra products from subcategories
+        if (products.length < 3) {
+            const extraProducts = subCategories.flatMap((sub) => sub.products.slice(1));
+            products = [...products, ...extraProducts].slice(0, 3);
+        }
+
+        return products;
+    };
 
     const marqueeList = [
         { image: "mymonty", alt: "MyMonty", width: "174", height: "35", link: "https://mymonty.com" },
@@ -179,32 +281,86 @@
 
     const solutions = [
         {  
-            title: "Core Network", 
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, eleifend nunc. Ut scelerisque, nisl sed lacinia fringilla, mi diam.",
+            title: "MNO Solution", 
+            category: "Core Network", 
             link: "",
-            image: "core-network", 
+            image: "mno-solution-partner", 
             width: "", 
             height: "", 
             color: "#2B6FF6", 
             // background: linear-gradient(180deg, rgba(0,0,0,1) 47%, rgba(43,111,246,1) 100%);
         },
         {  
-            title: "RAN", 
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, eleifend nunc. Ut scelerisque, nisl sed lacinia fringilla, mi diam.",
+            title: "Dense Area Solution", 
+            category: "RAN", 
             link: "",
-            image: "ran", 
+            image: "dense-area-solution-partner", 
             width: "", 
             height: "", 
             color: "#43516D", 
         },
         {  
-            title: "Repeater", 
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, eleifend nunc. Ut scelerisque, nisl sed lacinia fringilla, mi diam.",
+            title: "Fiber Solution", 
+            category: "Repeater", 
             link: "",
-            image: "repeater", 
+            image: "fiber-solution-partner", 
             width: "", 
             height: "", 
             color: "#323D86", 
+        },
+        {  
+            title: "FWA Solution", 
+            category: "Core Network", 
+            link: "",
+            image: "fwa-solution-partner", 
+            width: "", 
+            height: "", 
+            color: "#2B6FF6", 
+        },
+        {  
+            title: "Rural Area Solution", 
+            category: "RAN", 
+            link: "",
+            image: "rural-area-solution-partner", 
+            width: "", 
+            height: "", 
+            color: "#43516D", 
+        },
+        {  
+            title: "Wireless Solution", 
+            category: "Repeater", 
+            link: "",
+            image: "wireless-solution-partner", 
+            width: "", 
+            height: "", 
+            color: "#323D86", 
+        },
+        {  
+            title: "Enterprise Solution", 
+            category: "Core Network", 
+            link: "",
+            image: "enterprise-solution-partner", 
+            width: "", 
+            height: "", 
+            color: "#2B6FF6", 
+        },
+        {  
+            title: "Indoor Solution", 
+            category: "Repeater", 
+            link: "",
+            image: "indoor-solution-partner", 
+            width: "", 
+            height: "", 
+            color: "#43516D", 
+        },
+        {  
+            title: "ics Wireless Solution", 
+            category: "Repeater", 
+            link: "",
+            image: "ics-wireless-solution-partner", 
+            width: "", 
+            height: "", 
+            color: "#2B6FF6", 
         },
     ]
 
@@ -229,7 +385,36 @@
             description: "Frees up resources for innovation and business growth. Improves ROI by reducing unnecessary expenses. Enhances competitive advantage by optimizing cost-efficiency.",
             icon: "save-copex-and-opex",
         },
+        {
+            title: "Tailor Made Solution",
+            description: "Customized service or product designed to meet the specific needs and goals of a business.",
+            icon: "tailor-made-solution",
+        },
+        {
+            title: "3rd-party Product integrated Openly",
+            description: "Seamlessly connected with third-party solutions.",
+            icon: "3rd-party-product-integrated-openly",
+        },
     ]
+
+    const identities = [
+        {
+            title: "Seamless Connectivity",
+            description: "Stay Connected Anytime, Anywhere. <br /> Experience uninterrupted communication with our reliable network.",
+            icon: "seamless-connectivity",
+        },
+        {
+            title: "Advanced Technology",
+            description: "Innovative Solutions for a Digital World. <br /> Leverage the power of cutting-edge telecom technology.",
+            icon: "advanced-technology",
+        },
+        {
+            title: "Dedicated Support",
+            description: "24/7 Support, Tailored to You. <br /> We're here round the clock, offering personalized solutions to meet your need",
+            icon: "dedicated-support",
+        },
+    ]
+
 </script>
 
 <style lang="sass">

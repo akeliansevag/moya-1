@@ -1,13 +1,12 @@
 <template>
 	<!-- <Preloader /> -->
+	<NuxtLoadingIndicator class="!opacity-100" />
 	
-	<div>
-		<HeaderAppHeader />
-		<main class="mt-[var(--header-height)]">
-			<NuxtPage />
-		</main>
-		<AppFooter />
-	</div>
+	<HeaderAppHeader />
+	<main class="mt-[var(--header-height)]">
+		<NuxtPage />
+	</main>
+	<AppFooter />
 </template>
 
 <script setup>

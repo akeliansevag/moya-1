@@ -18,7 +18,8 @@
                     <ul v-if="item.links && item.links.length" :class="activeIndices[itemIndex] ? 'max-h-[700px] mt-2' : 'max-h-0'" class="children-menu flex flex-col gap-4 px-4 bg-[#ECECEE] rounded-lg overflow-hidden transition-all duration-500 ease-in-out">
                         <li v-for="(subItem, subItemIndex) in item.links" :key="subItemIndex" :class="{ 'mt-4': subItemIndex === 0, 'mb-4': subItemIndex === item.links.length - 1 }">
                             <div v-if="subItem.subLinks && subItem.subLinks.length" @click.stop="toggleActive(`${itemIndex}-${subItemIndex}`)" class="flex justify-between items-center">
-                                <span class="font-Harmony font-bold">{{ subItem.title }}</span>
+                                <NuxtLink v-if="subItem.subLinks.clickable" :to="`/${subItem.path}`" class="font-Harmony font-bold">{{ subItem.title }}</NuxtLink>
+                                <span v-else class="font-Harmony font-bold">{{ subItem.title }}</span>
                                 <NuxtImg v-if="subItem.subLinks && subItem.subLinks.length" class="transition-transform duration-300 ease-in-out" :class="{ 'rotate-180': activeIndices[`${itemIndex}-${subItemIndex}`] }" src="/images/icons/chevron-down-black.svg" alt="Chevron Down" width="10" height="6" />
                             </div>
 
@@ -27,7 +28,8 @@
                             <!-- Sub-links -->
                             <ul v-if="subItem.subLinks && subItem.subLinks.length" :class="activeIndices[`${itemIndex}-${subItemIndex}`] ? 'max-h-[700px] mt-2' : 'max-h-0'" class="pl-4 flex flex-col gap-2 transition-all duration-500 ease-in-out overflow-hidden">
                                 <li v-for="(subSubItem, subSubIndex) in subItem.subLinks" :key="subSubIndex">
-                                    <NuxtLink :to="`/${subSubItem.path}`" class="link">{{ subSubItem.title }}</NuxtLink>
+                                    <NuxtLink :to="`/${subItem.path}/${subSubItem.path}`" class="link">{{ subSubItem.title }}</NuxtLink>
+                                    <!-- :to="`/${subItem.path}/${subLink.path}`" -->
                                 </li>
                             </ul>
                         </li>
@@ -40,17 +42,17 @@
                 <p class="text-[#A2A2A2] uppercase text-sm">Featured Items</p>
                 <div class="flex flex-col gap-4">
                     <div class="w-full flex items-center gap-4 border rounded-lg p-4">
-                        <NuxtImg src="/images/mno-solution-menu.svg" alt="MNO Solution" width="86" height="72" />
+                        <NuxtImg src="/images/core-network-menu.png" alt="Core Network" width="86" height="72" />
                         <div class="flex flex-col gap-2">
                             <p class="text-sm">MNO Solution</p>
                             <p class="text-[10px] text-[#A2A2A2]">End-to-end solution compliant with 3GPP standards, offering full functionality, third-party device integration, and scalable user capacity from 100 to 10 million.</p>
                         </div>
                     </div>
                     <div class="w-full flex items-center gap-4 border rounded-lg p-4">
-                        <NuxtImg src="/images/enterprise-private-network-solution-menu.svg" alt="Enterprise/Private Network Solution" width="86" height="72" />
+                        <NuxtImg src="/images/4g-lte-micro-bbu-menu.png" alt="4G LTE MICRO BBU" width="86" height="72" />
                         <div class="flex flex-col gap-2">
-                            <p class="text-sm">Enterprise/Private Network Solution</p>
-                            <p class="text-[10px] text-[#A2A2A2]">Provide Data, VoLTE, SMS services to enterprise customers with a private network.</p>
+                            <p class="text-sm">4G LTE BBU</p>
+                            <p class="text-[10px] text-[#A2A2A2]">Distributed Site - Micro BBU</p>
                         </div>
                     </div>
                 </div>
@@ -59,7 +61,9 @@
 
         <!-- Get Quote Button positioned absolutely at the bottom of the nav -->
         <div class="absolute bottom-[var(--header-height)] left-1/2 -translate-x-1/2 flex lg:hidden justify-center items-center gap-6 w-full bg-white border-t py-2 z-[3]">
-            <NuxtLink class="py-2 px-6 text-white bg-primary rounded-full select-none transition-all duration-300 ease-in-out">Get Quote</NuxtLink>
+            <NuxtLink to="/get-a-quote">
+                <button class="py-2 px-6 text-white bg-primary rounded-full select-none transition-all duration-300 ease-in-out">Get a Quote</button>
+            </NuxtLink>
         </div>
     </nav>
 </template>

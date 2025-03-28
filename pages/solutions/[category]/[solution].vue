@@ -17,7 +17,7 @@
 				<div class="flex flex-col gap-8 lg:w-1/2">
 					<h2 class="text-3xl lg:text-5xl font-semibold">{{ categoryData.sub_title }}</h2>
 					<p class="text-sm" v-html="categoryData.description"></p>
-					<NuxtLink to="/">
+					<NuxtLink to="/get-a-quote">
 						<button class="p-4 min-w-[120px] text-sm border border-white text-white bg-transparent hover:border-black hover:text-black hover:bg-white rounded-full select-none transition-all duration-300 ease-in-out">Get a Quote</button>
 					</NuxtLink>
 				</div>
@@ -88,10 +88,10 @@
 							</NuxtLink>
 						</div>
 						<div class="flex gap-4">
-							<NuxtLink to="/">
+							<NuxtLink to="/get-a-quote">
 								<button class="p-4 min-w-[120px] text-sm text-white bg-primary hover:text-white hover:bg-black rounded-full select-none transition-all duration-300 ease-in-out">Get a Quote</button>
 							</NuxtLink>
-							<NuxtLink class="flex lg:justify-between items-center gap-2 text-base text-primary">
+							<NuxtLink :to="`/products/${slugify(product.category)}/${slugify(product.sub_category)}/${slugify(product.title)}`" class="flex lg:justify-between items-center gap-2 text-base text-primary">
 								<button class="transition-all duration-300 ease-in-out text-nowrap">Learn More</button>
 								<Icon name="fa6-solid:angle-right" class="transition duration-300 ease-in-out group-hover:translate-x-1" />
 							</NuxtLink>

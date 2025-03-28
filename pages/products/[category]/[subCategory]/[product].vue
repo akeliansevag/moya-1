@@ -31,7 +31,7 @@
 
                         <p class="text-sm" v-html="productData.description"></p>
                      
-                        <NuxtLink to="/get-quote" class="block mt-12">
+                        <NuxtLink to="/get-a-quote" class="block mt-12">
                             <button class="flex justify-center items-center gap-2 p-4 min-w-[120px] w-full text-sm text-white bg-primary hover:text-white hover:bg-black rounded-full select-none transition-all duration-300 ease-in-out group">
                                 <span>Get Custom Quote</span>
                                 <Icon name="fa6-solid:arrow-right" class="transition duration-300 ease-in-out group-hover:translate-x-1" />
@@ -72,10 +72,10 @@
                         </NuxtLink>
                     </div>
                     <div class="flex gap-4">
-                        <NuxtLink to="/">
+                        <NuxtLink to="/get-a-quote">
                             <button class="p-4 min-w-[120px] text-sm text-white bg-primary hover:bg-black rounded-full transition-all duration-300">Get a Quote</button>
                         </NuxtLink>
-                        <NuxtLink class="flex items-center gap-2 text-base text-primary">
+                        <NuxtLink :to="`/products/${slugify(categoryData.title)}/${slugify(product.parentSubcategory)}/${slugify(product.title)}`" class="flex items-center gap-2 text-base text-primary">
                             <button class="transition-all duration-300">Learn More</button>
                             <Icon name="fa6-solid:angle-right" class="transition duration-300 group-hover:translate-x-1" />
                         </NuxtLink>

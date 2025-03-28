@@ -68,7 +68,7 @@
                         <div class="flex flex-col pt-12 px-4 lg:px-12 text-white">
                             <h2 class="text-base font-semibold">{{ solution.category }}</h2>
                             <h3 class="text-2xl lg:text-3xl font-semibold mt-4">{{ solution.title }}</h3>
-                            <NuxtLink to="/">
+                            <NuxtLink :to="`/solutions/${slugify(solution.category)}/${slugify(solution.title)}`">
                                 <button class="flex items-center gap-2 mt-8 py-4 px-6 min-w-[120px] text-sm border border-white text-white bg-transparent hover:border-black hover:text-black hover:bg-white rounded-full select-none transition-all duration-300 ease-in-out group">
                                     Learn More
                                     <Icon name="fa6-solid:angle-right" class="transition duration-300 ease-in-out group-hover:translate-x-1" />
@@ -135,7 +135,7 @@
                 <div class="flex flex-col gap-4 md:w-1/2">
                     <h2 class="text-2xl md:text-5xl font-semibold">Have Questions?<br />Talk To Us</h2>
                     <p class="text-sm">Get in touch with us at Moya easily!<br />Whether you have questions or need assistance.</p>
-                    <NuxtLink to="/">
+                    <NuxtLink to="/contact-us">
                         <button class="p-4 min-w-[120px] text-sm text-black bg-white hover:text-white hover:bg-black rounded-full select-none transition-all duration-300 ease-in-out">Get in Touch</button>
                     </NuxtLink>
                 </div>
@@ -172,10 +172,10 @@
                                     </NuxtLink>
                                 </div>
                                 <div class="flex gap-4">
-                                    <NuxtLink to="/">
+                                    <NuxtLink to="/get-a-quote">
                                         <button class="p-4 min-w-[120px] text-sm text-white bg-primary hover:text-white hover:bg-black rounded-full select-none transition-all duration-300 ease-in-out">Get a Quote</button>
                                     </NuxtLink>
-                                    <NuxtLink class="flex lg:justify-between items-center gap-2 text-base text-primary">
+                                    <NuxtLink :to="`/products/${slugify(category.title)}/${slugify(product.title)}`" class="flex lg:justify-between items-center gap-2 text-base text-primary">
                                         <button class="transition-all duration-300 ease-in-out">Learn More</button>
                                         <Icon name="fa6-solid:angle-right" class="transition duration-300 ease-in-out group-hover:translate-x-1" />
                                     </NuxtLink>

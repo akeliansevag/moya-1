@@ -72,7 +72,7 @@
 
     <div class="hidden lg:flex justify-between items-center gap-6">
         <NuxtLink to="/get-a-quote">
-            <button class="p-4 min-w-[120px] text-white bg-primary hover:text-black hover:bg-white rounded-full select-none transition-all duration-300 ease-in-out">Get a Quote</button>
+            <button class="p-2 min-w-[120px] text-white bg-primary hover:text-black hover:bg-white rounded-full select-none transition-all duration-300 ease-in-out">Get a Quote</button>
         </NuxtLink>
     </div>
 </template>

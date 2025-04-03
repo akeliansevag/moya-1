@@ -12,7 +12,7 @@
                         <p class="text-sm">Get in touch with us at Moya easily! Whether you have questions or need assistance.</p>
                     </div>
                     <NuxtLink to="/">
-                        <button class="p-4 min-w-[120px] text-sm text-black bg-white hover:text-white hover:bg-black rounded-full select-none transition-all duration-300 ease-in-out">Get in Touch</button>
+                        <button class="p-2 min-w-[120px] text-sm text-black bg-white hover:text-white hover:bg-black rounded-full select-none transition-all duration-300 ease-in-out">Get in Touch</button>
                     </NuxtLink>
                 </div>
             </div>

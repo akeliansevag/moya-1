@@ -33,7 +33,7 @@
                             <div v-if="submissionMessage" :class="{'text-red-500': isError, 'text-gray-500': !isError}">{{ submissionMessage }}</div>
                         </div>
 
-                        <hr class="border-[#A2A2A2]" />
+                        <hr class="border-[#A2A2A2]/50" />
 
                         <div class="flex gap-8">
                             <NuxtLink to="/" class="flex flex-shrink-0 justify-center items-center text-2xl">
@@ -98,7 +98,7 @@
 
             <!-- <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
                 <div class="">
-                    <hr class="my-8 border-[#A2A2A2]" />
+                    <hr class="my-8 border-[#A2A2A2]/50" />
 
                     <div class="flex gap-4">
                         <NuxtLink to="/" class="flex flex-shrink-0 justify-center items-center size-10 bg-[#3F3F3F]/25 rounded-md">
@@ -114,7 +114,7 @@
                 </div>
             </div> -->
 
-            <hr class="mb-12 mt-24 border-[#A2A2A2]" />
+            <hr class="mb-12 mt-24 border-[#A2A2A2]/50" />
 
             <div class="flex justify-between items-center">
                 <div class="flex gap-4">

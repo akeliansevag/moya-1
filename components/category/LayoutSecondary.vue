@@ -18,7 +18,7 @@
                             </h3>
                         </div>
                         <NuxtLink to="/">
-                            <button class="p-4 min-w-[120px] text-sm border border-white text-white bg-primary hover:text-white hover:bg-black rounded-full select-none transition-all duration-300 ease-in-out">
+                            <button class="p-2 min-w-[120px] text-sm border border-white text-white bg-primary hover:text-white hover:bg-black rounded-full select-none transition-all duration-300 ease-in-out">
                                 Get a Quote
                             </button>
                         </NuxtLink>

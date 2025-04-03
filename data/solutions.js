@@ -389,49 +389,65 @@ const categories = [
                 ]
             },
             {
-                title: "Rural Area Solution",
-                sub_title: "Effortless Connectivity, Tailored for Every Rural Need",
-                description: "Rural Optimization: Deploy integrated or distributed eNB micro sites for wide-area coverage. Effortless Deployment: Simplified installation for quick and cost-effective rollout. Flexible Power Options: Supports multiple output power levels (20W/40W/60W) to meet diverse scenarios.",
+                title: "Indoor Solution",
+                sub_title: "Reliable Connectivity, Optimized for Indoor Spaces",
+                description: "<span class='font-bold'>Deploy Femtocell or Distributed \"BBU + pRRU\" for Indoor Scenarios</span>: Utilize advanced femtocell solutions or a distributed baseband unit (BBU) combined with a small remote radio unit (pRRU) to deliver seamless, high-performance connectivity in indoor environments, ensuring robust coverage and capacity in challenging spaces. <br /><span class='font-bold'>Easy to Deploy</span>: Streamlined installation process with minimal infrastructure requirements, enabling quick and cost-efficient deployment in a wide range of indoor scenarios, from residential buildings to enterprise environments.",
                 features: [
                     {
-                        title: "Low-Cost and High-Coverage Base Stations",
-                        icon: "low-cost-high-coverage-base-stations",
+                        title: "Distributed Antenna Systems (DAS)",
+                        icon: "distributed-antenna-systems",
                     },
                     {
-                        title: "Satellite & Backhaul Solutions",
-                        icon: "satellite-backhaul-solutions",
+                        title: "Small Cells (Femto, Pico, and Microcells)",
+                        icon: "small-cells-femto-pico-microcells",
                     },
                     {
-                        title: "Energy-Efficient and Off-Grid Power Solutions",
-                        icon: "energy-efficient-off-grid-power-solutions",
+                        title: "Wi-Fi Offloading & LTE/5G",
+                        icon: "wi-fi-offloading-lte-5g",
                     }
                 ],
-                image: "rural-area-solution-partner",
-                image1: "rural-area-solution-infrastructure",
+                image: "indoor-solution-partner",
+                image1: "indoor-solution-infrastructure",
                 benefits: {
-                    title: "Seamless Connectivity for Every Rural Need",
+                    title: "Optimized Indoor Connectivity, Effortless Deployment",
                     items: [
-                        "Broad Coverage",
-                        "Flexible micro site options with adjustable power levels",
-                        "Cost-Effective & Easy Setup",
+                        "Enhanced Indoor Coverage",
+                        "Supports a wide range of indoor scenarios,with adaptable configurations",
+                        "Quick and Easy Deployment",
                     ]
                 },
                 application_scenario: [
                     {
-                        title: "Country",
-                        image: "rural-area-solution-country-scenario"
+                        title: "Service Hall",
+                        image: "indoor-solution-service-hall-scenario"
                     },
                     {
-                        title: "Prospect",
-                        image: "rural-area-solution-prospect-scenario"
+                        title: "Residential",
+                        image: "indoor-solution-residential-scenario"
                     },
                     {
-                        title: "Coastline",
-                        image: "rural-area-solution-coastline-scenario"
+                        title: "Office",
+                        image: "indoor-solution-office-scenario"
                     },
                     {
-                        title: "Mine",
-                        image: "rural-area-solution-mine-scenario"
+                        title: "Club",
+                        image: "indoor-solution-club-scenario"
+                    },
+                    {
+                        title: "Workshop",
+                        image: "indoor-solution-workshop-scenario"
+                    },
+                    {
+                        title: "Logistic",
+                        image: "indoor-solution-logistic-scenario"
+                    },
+                    {
+                        title: "Parking",
+                        image: "indoor-solution-parking-scenario"
+                    },
+                    {
+                        title: "Restaurant",
+                        image: "indoor-solution-restaurant-scenario"
                     },
                 ],
                 products: [
@@ -460,28 +476,80 @@ const categories = [
                         sub_category:  "Baseband Unit",
                     },
                     {
-                        title: "4G LTE 4T4R RRU",
+                        title: "4G LTE pHUB BBU",
+                        acronym: "BBU",
+                        sub_title: "Distributed Site - pHUB",
+                        image: "4g-lte-phub",
+                        category:  "4G/5G RAN",
+                        sub_category:  "Baseband Unit",
+                    },
+                    {
+                        title: "4G LTE pRRU",
                         acronym: "RRU",
-                        sub_title: "Distributed Site - Outdoor RRU",
-                        image: "4g-lte-4t4r-rru",
+                        sub_title: "Distributed Site - pRRU",
+                        image: "4g-lte-prru",
                         category:  "4G/5G RAN",
                         sub_category:  "Remote Radio Unit",
                     },
+                ]
+            },
+        ]
+    },
+    {
+        title: "Repeater",
+        sub_title: "Boosting Signals, Bridging Distances.",
+        description: "Extending Coverage, Enhancing Connectivity.",
+        solutions: [
+            {
+                title: "Fiber Solution",
+                sub_title: "Expanding Multi-System Coverage with Long-Distance Reliability",
+                description: "Fiber repeater support multi-system multi-band combination fusion coverage. <br /> UP to 10 kilometers distance <br /> Low isolation required.",
+                features: [
                     {
-                        title: "4G LTE Macro eNB 2x40w",
-                        acronym: "eNB",
-                        sub_title: "Integrated eNB (outdoor)",
-                        image: "4g-lte-macro-enb-2x40w",
-                        category:  "4G/5G RAN",
-                        sub_category:  "Integrated eNB",
+                        title: "Fiber-to-the-Antenna (FTTA)",
+                        icon: "fiber-to-the-antenna", 
                     },
                     {
-                        title: "Omni Fiberglass Antenna",
-                        acronym: "Omni Fiberglass Antenna",
-                        sub_title: "Easy Installation",
-                        image: "omni-fiberglass-antenna",
-                        category:  "Antenna",
-                        sub_category:  "Omni Fiberglass Antenna",
+                        title: "Cloud-RAN (C-RAN) with Fiber Backhaul",
+                        icon: "cloud-ran-with-fiber-backhaul",
+                    }
+                ],
+                image: "fiber-solution-partner",
+                image1: "fiber-solution-infrastructure",
+                benefits: {
+                    title: "Optimized Indoor Connectivity, Effortless Deployment",
+                    items: [
+                        "Extended Coverage",
+                        "Enables integration of multiple networks for enhanced performance and flexibility.",
+                        "Low Isolation Requirement",
+                    ]
+                },
+                application_scenario: [
+                    {
+                        title: "Urban",
+                        image: "fiber-solution-urban-scenario"
+                    },
+                    {
+                        title: "Office Building",
+                        image: "fiber-solution-office-building-scenario"
+                    },
+                    {
+                        title: "Metro",
+                        image: "fiber-solution-metro-scenario"
+                    },
+                    {
+                        title: "Merto",
+                        image: "fiber-solution-community-scenario"
+                    },
+                ],
+                products: [
+                    {
+                        title: "Fiber Repeater",
+                        acronym: "Fiber Repeater",
+                        sub_title: "10W/20W/40W",
+                        image: "fiber-repeater",
+                        category:  "Repeater",
+                        sub_category: "Fiber Repeater",
                     },
                     {
                         title: "Panel Antenna",
@@ -489,12 +557,130 @@ const categories = [
                         sub_title: "Easy Installation",
                         image: "panel-antenna",
                         category:  "Antenna",
-                        sub_category:  "Panel Antenna",
+                        sub_category: "Panel Antenna",
+                    }
+                ]
+            },
+            {
+                title: "Wireless Solution",
+                sub_title: "Seamless Connectivity, Anytime, Anywhere",
+                description: "Wireless repeaters enhance network coverage by amplifying and retransmitting signals, ensuring reliable and high-quality connectivity in areas  with weak reception. Designed for rural deployments. these solutions support multiple frequency bands and network systems, optimizing signal strength while reducing infrastructure costs.",
+                features: [
+                    {
+                        title: "Fiber-to-the-Antenna (FTTA)",
+                        icon: "fiber-to-the-antenna", 
+                    },
+                    {
+                        title: "Cloud-RAN (C-RAN) with Fiber Backhaul",
+                        icon: "cloud-ran-with-fiber-backhaul",
+                    }
+                ],
+                image: "wireless-solution-partner",
+                image1: "wireless-solution-infrastructure",
+                benefits: {
+                    title: "Stronger Signals, Wider Reach, Seamless Connectivity",
+                    items: [
+                        "Extended Coverage",
+                        "Ensures compatibility with various network standards",
+                        "Easy Deployment",
+                    ]
+                },
+                application_scenario: [
+                    {
+                        title: "Rural Area",
+                        image: "wireless-solution-rural-area-scenario"
+                    },
+                    {
+                        title: "Desert",
+                        image: "wireless-solution-desert-scenario"
+                    },
+                    {
+                        title: "Island",
+                        image: "wireless-solution-island-scenario"
+                    },
+                    {
+                        title: "Tunnel",
+                        image: "wireless-solution-tunnel-scenario"
+                    },
+                ],
+                products: [
+                    {
+                        title: "Wireless Repeater",
+                        acronym: "Wireless Repeater",
+                        sub_title: "10W/20W/40W",
+                        image: "wireless-repeater",
+                        category:  "Repeater",
+                        sub_category: "Wireless Repeater",
+                    },
+                    {
+                        title: "Panel Antenna",
+                        acronym: "Panel Antenna",
+                        sub_title: "Easy Installation",
+                        image: "panel-antenna",
+                        category:  "Antenna",
+                        sub_category: "Panel Antenna",
+                    }
+                ]
+            },
+            {
+                title: "ICS Wireless Solution",
+                sub_title: "Simple Deployment, Strong Isolation, Better Coverage",
+                description: "Designed for effortless deployment with simple and easy construction <br /> Ensuring low maintenance and long-term reliability. <br />Featuring a powerful 30dB isolation cancellation ability, it guarantees stable and  interference-free performance while providing a seamless and cost-effective installation process.",
+                features: [
+                    {
+                        title: "Intelligent Repeaters",
+                        icon: "intelligent-repeaters", 
+                    },
+                    {
+                        title: "MIMO Signal Enhancement",
+                        icon: "mimo-signal-enhancement",
+                    }
+                ],
+                image: "ics-wireless-solution-partner",
+                image1: "ics-wireless-solution-infrastructure",
+                benefits: {
+                    title: "Smart Coverage, Strong Signals, Effortless Deployment",
+                    items: [
+                        "Easy Deployment & Low Maintenance",
+                        "Features 30dB isolation cancellation",
+                        "Reliable Coverage Expansion",
+                    ]
+                },
+                application_scenario: [
+                    {
+                        title: "Rural Area",
+                        image: "ics-wireless-solution-rural-area-scenario"
+                    },
+                    {
+                        title: "Highway",
+                        image: "ics-wireless-solution-highway-scenario"
+                    },
+                    {
+                        title: "Tunnel",
+                        image: "ics-wireless-solution-tunnel-scenario"
+                    },
+                ],
+                products: [
+                    {
+                        title: "ICS Wireless Repeater",
+                        acronym: "ICS Wireless Repeater",
+                        sub_title: "10W/20W/40W",
+                        image: "ics-wireless-repeater",
+                        category:  "Repeater",
+                        sub_category: "ICS Wireless Repeater",
+                    },
+                    {
+                        title: "Panel Antenna",
+                        acronym: "Panel Antenna",
+                        sub_title: "Easy Installation",
+                        image: "panel-antenna",
+                        category:  "Antenna",
+                        sub_category: "Panel Antenna",
                     }
                 ]
             },
         ]
-    },
+    }
 ]
 
 export default categories;

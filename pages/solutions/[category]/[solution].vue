@@ -64,7 +64,7 @@
                     <h4 class="text-sm">Application Scenario</h4>
                     <h2 class="text-xl lg:text-3xl font-semibold mt-4">Tailored Scenario for Every Challenge</h2>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8 lg:gap-4 text-center">
+                <div class="grid gap-8 lg:gap-4 text-center" :class="{'md:grid-cols-4': solutionData.application_scenario.length === 4, 'md:grid-cols-3': solutionData.application_scenario.length === 3, 'md:grid-cols-4': solutionData.application_scenario.length >= 4 && solutionData.application_scenario.length % 2 === 0}">
                     <div v-for="(scenario, index) in solutionData.application_scenario" :key="index" class="relative">
                         <NuxtImg class="w-full" :src="`/images/${scenario.image}.png`" :alt="scenario.title" width="366" height="342" />
                         <h2 class="absolute bottom-10 left-10 text-2xl font-bold text-white mt-4">{{ scenario.title }}</h2>

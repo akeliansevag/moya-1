@@ -189,6 +189,312 @@ const categories = [
             },
         ]
     },
+    {
+        title: "4G/5G RAN",
+        sub_title: "Smarter Networks, Stronger Connections.",
+        description: "Empowering LTE/5G with Flexibility and Efficiency.",
+        solutions: [
+            {
+                title: "Dense Area Solution",
+                sub_title: "Optimized Connectivity for High-Density Networks",
+                description: "Deploying high-performance macro sites to support dense, high-traffic online areas while ensuring seamless connectivity and adaptability across a wide range of deployment scenarios",
+                features: [
+                    {
+                        title: "Massive MIMO (Multiple Input Multiple Output)",
+                        icon: "massive-mimo",
+                    },
+                    {
+                        title: "Small Cells & Network Densification",
+                        icon: "small-cells-network-densification",
+                    },
+                    {
+                        title: "Intelligent Traffic Steering & Load Balancing",
+                        icon: "intelligent-traffic-steering-load-balancing",
+                    }
+                ],
+                image: "dense-area-solution-partner",
+                image1: "dense-area-solution-infrastructure",
+                benefits: {
+                    title: "Unifying Networks, Powering Innovation",
+                    items: [
+                        "High-Capacity Coverage",
+                        "Adaptable to various scenarios",
+                        "Enhanced Performance",
+                    ]
+                },
+                application_scenario: [
+                    {
+                        title: "Urban",
+                        image: "dense-area-solution-urban-scenario"
+                    },
+                    {
+                        title: "Dense Crowds",
+                        image: "dense-area-solution-dense-crowds-scenario"
+                    },
+                    {
+                        title: "Stadium",
+                        image: "dense-area-solution-stadium-scenario"
+                    },
+                    {
+                        title: "Community",
+                        image: "dense-area-solution-community-scenario"
+                    },
+                ],
+                products: [
+                    {
+                        title: "Evolved Packet Core",
+                        acronym: "EPC",
+                        sub_title: "EPC",
+                        image: "evolved-packet-core",
+                        category: "Core Network",
+                        sub_category: "Evolved Packet Core",
+                    },
+                    {
+                        title: "IP MultiMedia Subsystem",
+                        acronym: "IMS",
+                        sub_title: "IMS",
+                        image: "ip-multimedia-subsytem",
+                        category:  "Core Network",
+                        sub_category:  "IP MultiMedia Subsystem",
+                    },
+                    {
+                        title: "4G LTE MACRO BBU",
+                        acronym: "BBU",
+                        sub_title: "Distributed Site - Macro BBU",
+                        image: "4g-lte-macro-bbu",
+                        category:  "4G/5G RAN",
+                        sub_category:  "Baseband Unit",
+                    },
+                    {
+                        title: "4G LTE 4T4R RRU",
+                        acronym: "RRU",
+                        sub_title: "Distributed Site - Outdoor RRU",
+                        image: "4g-lte-4t4r-rru",
+                        category:  "4G/5G RAN",
+                        sub_category:  "Remote Radio Unit",
+                    },
+                    {
+                        title: "Panel Antenna",
+                        acronym: "Panel Antenna",
+                        sub_title: "Easy Installation",
+                        image: "panel-antenna",
+                        category:  "Antenna",
+                        sub_category:  "Panel Antenna",
+                    }
+                ]
+            },
+            {
+                title: "Rural Area Solution",
+                sub_title: "Effortless Connectivity, Tailored for Every Rural Need",
+                description: "Rural Optimization: Deploy integrated or distributed eNB micro sites for wide-area coverage. Effortless Deployment: Simplified installation for quick and cost-effective rollout. Flexible Power Options: Supports multiple output power levels (20W/40W/60W) to meet diverse scenarios.",
+                features: [
+                    {
+                        title: "Low-Cost and High-Coverage Base Stations",
+                        icon: "low-cost-high-coverage-base-stations",
+                    },
+                    {
+                        title: "Satellite & Backhaul Solutions",
+                        icon: "satellite-backhaul-solutions",
+                    },
+                    {
+                        title: "Energy-Efficient and Off-Grid Power Solutions",
+                        icon: "energy-efficient-off-grid-power-solutions",
+                    }
+                ],
+                image: "rural-area-solution-partner",
+                image1: "rural-area-solution-infrastructure",
+                benefits: {
+                    title: "Seamless Connectivity for Every Rural Need",
+                    items: [
+                        "Broad Coverage",
+                        "Flexible micro site options with adjustable power levels",
+                        "Cost-Effective & Easy Setup",
+                    ]
+                },
+                application_scenario: [
+                    {
+                        title: "Country",
+                        image: "rural-area-solution-country-scenario"
+                    },
+                    {
+                        title: "Prospect",
+                        image: "rural-area-solution-prospect-scenario"
+                    },
+                    {
+                        title: "Coastline",
+                        image: "rural-area-solution-coastline-scenario"
+                    },
+                    {
+                        title: "Mine",
+                        image: "rural-area-solution-mine-scenario"
+                    },
+                ],
+                products: [
+                    {
+                        title: "Evolved Packet Core",
+                        acronym: "EPC",
+                        sub_title: "EPC",
+                        image: "evolved-packet-core",
+                        category: "Core Network",
+                        sub_category: "Evolved Packet Core",
+                    },
+                    {
+                        title: "IP MultiMedia Subsystem",
+                        acronym: "IMS",
+                        sub_title: "IMS",
+                        image: "ip-multimedia-subsytem",
+                        category:  "Core Network",
+                        sub_category:  "IP MultiMedia Subsystem",
+                    },
+                    {
+                        title: "4G LTE MICRO BBU",
+                        acronym: "BBU",
+                        sub_title: "Distributed Site - Micro BBU",
+                        image: "4g-lte-micro-bbu",
+                        category:  "4G/5G RAN",
+                        sub_category:  "Baseband Unit",
+                    },
+                    {
+                        title: "4G LTE 4T4R RRU",
+                        acronym: "RRU",
+                        sub_title: "Distributed Site - Outdoor RRU",
+                        image: "4g-lte-4t4r-rru",
+                        category:  "4G/5G RAN",
+                        sub_category:  "Remote Radio Unit",
+                    },
+                    {
+                        title: "4G LTE Macro eNB 2x40w",
+                        acronym: "eNB",
+                        sub_title: "Integrated eNB (outdoor)",
+                        image: "4g-lte-macro-enb-2x40w",
+                        category:  "4G/5G RAN",
+                        sub_category:  "Integrated eNB",
+                    },
+                    {
+                        title: "Omni Fiberglass Antenna",
+                        acronym: "Omni Fiberglass Antenna",
+                        sub_title: "Easy Installation",
+                        image: "omni-fiberglass-antenna",
+                        category:  "Antenna",
+                        sub_category:  "Omni Fiberglass Antenna",
+                    },
+                    {
+                        title: "Panel Antenna",
+                        acronym: "Panel Antenna",
+                        sub_title: "Easy Installation",
+                        image: "panel-antenna",
+                        category:  "Antenna",
+                        sub_category:  "Panel Antenna",
+                    }
+                ]
+            },
+            {
+                title: "Rural Area Solution",
+                sub_title: "Effortless Connectivity, Tailored for Every Rural Need",
+                description: "Rural Optimization: Deploy integrated or distributed eNB micro sites for wide-area coverage. Effortless Deployment: Simplified installation for quick and cost-effective rollout. Flexible Power Options: Supports multiple output power levels (20W/40W/60W) to meet diverse scenarios.",
+                features: [
+                    {
+                        title: "Low-Cost and High-Coverage Base Stations",
+                        icon: "low-cost-high-coverage-base-stations",
+                    },
+                    {
+                        title: "Satellite & Backhaul Solutions",
+                        icon: "satellite-backhaul-solutions",
+                    },
+                    {
+                        title: "Energy-Efficient and Off-Grid Power Solutions",
+                        icon: "energy-efficient-off-grid-power-solutions",
+                    }
+                ],
+                image: "rural-area-solution-partner",
+                image1: "rural-area-solution-infrastructure",
+                benefits: {
+                    title: "Seamless Connectivity for Every Rural Need",
+                    items: [
+                        "Broad Coverage",
+                        "Flexible micro site options with adjustable power levels",
+                        "Cost-Effective & Easy Setup",
+                    ]
+                },
+                application_scenario: [
+                    {
+                        title: "Country",
+                        image: "rural-area-solution-country-scenario"
+                    },
+                    {
+                        title: "Prospect",
+                        image: "rural-area-solution-prospect-scenario"
+                    },
+                    {
+                        title: "Coastline",
+                        image: "rural-area-solution-coastline-scenario"
+                    },
+                    {
+                        title: "Mine",
+                        image: "rural-area-solution-mine-scenario"
+                    },
+                ],
+                products: [
+                    {
+                        title: "Evolved Packet Core",
+                        acronym: "EPC",
+                        sub_title: "EPC",
+                        image: "evolved-packet-core",
+                        category: "Core Network",
+                        sub_category: "Evolved Packet Core",
+                    },
+                    {
+                        title: "IP MultiMedia Subsystem",
+                        acronym: "IMS",
+                        sub_title: "IMS",
+                        image: "ip-multimedia-subsytem",
+                        category:  "Core Network",
+                        sub_category:  "IP MultiMedia Subsystem",
+                    },
+                    {
+                        title: "4G LTE MICRO BBU",
+                        acronym: "BBU",
+                        sub_title: "Distributed Site - Micro BBU",
+                        image: "4g-lte-micro-bbu",
+                        category:  "4G/5G RAN",
+                        sub_category:  "Baseband Unit",
+                    },
+                    {
+                        title: "4G LTE 4T4R RRU",
+                        acronym: "RRU",
+                        sub_title: "Distributed Site - Outdoor RRU",
+                        image: "4g-lte-4t4r-rru",
+                        category:  "4G/5G RAN",
+                        sub_category:  "Remote Radio Unit",
+                    },
+                    {
+                        title: "4G LTE Macro eNB 2x40w",
+                        acronym: "eNB",
+                        sub_title: "Integrated eNB (outdoor)",
+                        image: "4g-lte-macro-enb-2x40w",
+                        category:  "4G/5G RAN",
+                        sub_category:  "Integrated eNB",
+                    },
+                    {
+                        title: "Omni Fiberglass Antenna",
+                        acronym: "Omni Fiberglass Antenna",
+                        sub_title: "Easy Installation",
+                        image: "omni-fiberglass-antenna",
+                        category:  "Antenna",
+                        sub_category:  "Omni Fiberglass Antenna",
+                    },
+                    {
+                        title: "Panel Antenna",
+                        acronym: "Panel Antenna",
+                        sub_title: "Easy Installation",
+                        image: "panel-antenna",
+                        category:  "Antenna",
+                        sub_category:  "Panel Antenna",
+                    }
+                ]
+            },
+        ]
+    },
 ]
 
 export default categories;

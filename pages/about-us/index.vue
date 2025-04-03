@@ -10,13 +10,13 @@
                     <li class="flex"><Icon name="fa6-solid:angle-right" /></li>
                     <li>About Us</li>
                 </ul>
-                <h1 class="text-3xl lg:text-4 xl font-bold">The Heart of Moya <br /> Our Core Identity & Vision</h1>
+                <h1 class="text-3xl lg:text-4xl font-bold">The Heart of Moya <br /> Our Core Identity & Vision</h1>
                 <p class="text-sm">Connecting the Future, Empowering Today.</p>
             </div>
         </div>
 	</section>
 
-    <section class="max-lg:py-12">
+    <section class="mt-12 max-lg:py-12">
         <div class="container">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-4 w-full lg:w-4/5 mx-auto">
                 <NuxtImg class="w-full order-1 lg:order-0" src="images/mountasser-hachem.webp" alt="Mountasser Hachem" width="987" height="876" />
@@ -35,17 +35,17 @@
             <div class="grid lg:grid-cols-2 items-center gap-4 lg:gap-32">
                 <div class="flex flex-col justify-center gap-8">
                     <h3 class="text-sm">About Us</h3>
-                    <h2 class="text-2xl lg:text-5xl font-semibold">Pioneering the Future of Telecommunications with Moya</h2>
+                    <h2 class="text-2xl lg:text-4xl font-semibold">Pioneering the Future of Telecommunications with Moya</h2>
                     <p class="text-sm text-[#5D5D5D]">With over 25 years of pioneering experience and a legacy of transformative success in the telecom industry, including the establishment of the mobile operator management business unit, Mountasser Hachem, founder and chairman of Monty Holding, is now bringing his visionary concept to life with the launch of Moya, his own telecom equipment brand. This bold venture marks the realization of a long-held vision, setting a new standard for the future of telecommunications technology.<br /><br />Moya seeks to break free from these outdated paradigms, offering fast, agile deployment, just like a "network in a box," with extreme interoperability and no license limitations.<br /><br />Our roadmap includes deploying a 4G core based on Release 9, to be tested and certified through the Comium network. Following this, IMS and Diameter systems will be integrated in the coming quarters. Designed and assembled in Sweden, with production in the Far East, the plan also encompasses O-RAN, IoT, and AI.
                     </p>
                 </div>
                 <NuxtImg class="w-full" src="images/pioneering-the-future-of-telecommunication.webp" alt="Satellite" width="1146" height="692" />
             </div>
 
-            <div class="flex max-lg:flex-col max-lg:gap-16 lg:justify-around py-24">
+            <div class="flex max-lg:flex-col max-lg:gap-16 lg:justify-around mt-12">
                 <div class="flex flex-col gap-10 text-center items-center" v-for="(item,index) in items" :key="index">
                     <div v-html="item.logo"></div>
-                    <h3 class="font-bold text-3xl">{{ item.title }}</h3>
+                    <h3 class="font-bold text-xl">{{ item.title }}</h3>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
     <section class="my-12 py-12">
         <div class="container">
             <div class="flex flex-col gap-12 w-2/3 mx-auto text-center">
-                <h2 class="text-2xl lg:text-5xl font-semibold">Leading Global Telecommunications with Innovative, and Practical Solutions</h2>
+                <h2 class="text-2xl lg:text-4xl font-semibold">Leading Global Telecommunications with Innovative, and Practical Solutions</h2>
                 <p class="text-base">Moya strives to be a regional and global telecom leader, driving innovation and practical breakthroughs in the industry.</p>
             </div>
             

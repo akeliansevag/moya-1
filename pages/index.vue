@@ -12,9 +12,9 @@
             <NuxtImg class="w-full" src="/images/antenna.gif" alt="" width="1444" height="309" />
         </div> -->
         <div class="container">
-            <div class="relative flex flex-col gap-8 lg:w-2/5 max-lg:items-center text-white max-lg:text-center z-[3] max-lg:-mt-48">
-                <h1 class="text-2xl lg:text-[52px] lg:leading-[1.2] font-bold">Connecting Your <span class="text-primary">World Everywhere</span></h1>
-                <p class="text-sm text-[#ACA8A8]">Stay connected effortlessly with our reliable telecom solutions, ensuring seamless communication anytime, anywhere. Experience high-speed networks, crystal-clear calls, and innovative services.</p>
+            <div class="relative flex flex-col gap-8 max-lg:items-center text-white max-lg:text-center z-[3] max-lg:-mt-48">
+                <h1 class="text-2xl lg:text-6xl font-bold lg:w-2/5">Connecting Your World<span class="text-primary"> Everywhere</span></h1>
+                <p class="text-sm text-[#ACA8A8] lg:w-1/3">Stay connected effortlessly with our reliable telecom solutions, ensuring seamless communication anytime, anywhere. Experience high-speed networks, crystal-clear calls, and innovative services.</p>
                 
                 <div class="flex gap-4">
                     <NuxtLink to="/">
@@ -60,7 +60,7 @@
                     :scrollbar="true"
                     :breakpoints="{
                         1280: {
-                            slidesPerView:3.5
+                            slidesPerView:3.2
                         },
                         1024: {
                             slidesPerView:2.5
@@ -359,7 +359,7 @@ import categories from '~/data/products';
             color: "#43516D", 
         },
         {  
-            title: "ics Wireless Solution", 
+            title: "ICS Wireless Solution", 
             category: "Repeater", 
             link: "",
             image: "ics-wireless-solution-partner", 

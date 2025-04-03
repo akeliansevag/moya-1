@@ -20,7 +20,7 @@
 				</div> -->
 
 				<div class="flex flex-col gap-8 lg:w-1/2">
-					<h2 class="text-3xl lg:text-5xl font-semibold">The Backbone of Intelligent Connectivity</h2>
+					<h2 class="text-3xl lg:text-4xl font-semibold">The Backbone of Intelligent Connectivity</h2>
 					<p class="text-sm">Empowering Connections with Every Product</p>
 					<NuxtLink to="/get-a-quote">
 						<button class="p-2 min-w-[120px] text-sm border border-white text-white bg-transparent hover:border-black hover:text-black hover:bg-white rounded-full select-none transition-all duration-300 ease-in-out">Get a Quote</button>
@@ -33,7 +33,7 @@
 	<section v-if="categoryData" class="my-12 py-12">
 		<div class="container">
 			<div class="flex max-lg:flex-col flex-row justify-between lg:items-center gap-4 mt-12 overflow-scroll">
-                <h2 class="text-xl lg:text-3xl font-semibold">Get to know {{ subCategoryData.acronym }}</h2>
+                <h2 class="text-xl lg:text-3xl font-semibold">Get to Know {{ subCategoryData.acronym }}</h2>
 
 				<button class="flex lg:justify-between items-center gap-2 text-base text-primary" @click="onToggle">
 					<span>Take a deeper dive</span>

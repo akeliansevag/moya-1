@@ -15,7 +15,7 @@
 
 			<div class="relative pt-12 pb-0 px-4 lg:py-24 lg:px-14 text-white rounded-3xl mt-12 bg-gradient-to-b from-[#000000] from-40% to-[#2B6FF6] to-100%">
 				<div class="flex flex-col gap-8 lg:w-1/2">
-					<h2 class="text-3xl lg:text-5xl font-semibold">{{ categoryData.sub_title }}</h2>
+					<h2 class="text-3xl lg:text-4xl font-semibold">{{ categoryData.sub_title }}</h2>
 					<p class="text-sm" v-html="categoryData.description"></p>
 					<NuxtLink to="/get-a-quote">
 						<button class="p-2 min-w-[120px] text-sm border border-white text-white bg-transparent hover:border-black hover:text-black hover:bg-white rounded-full select-none transition-all duration-300 ease-in-out">Get a Quote</button>
@@ -30,20 +30,20 @@
 
     <section v-if="solutionData" class="my-12 py-12">
 		<div class="container">
-            <div class="flex max-lg:flex-col lg:items-center gap-12">
+            <div class="flex max-lg:flex-col lg:items-center gap-12 lg:gap-48">
                 <div class="lg:w-3/5">
                     <h2 class="text-2xl font-bold">{{ solutionData.sub_title }}</h2>
-                    <p class="text-sm text-[#ACA8A8] mt-4" v-html="solutionData.description"></p>
+                    <p class="text-sm mt-4" v-html="solutionData.description"></p>
                 </div>
                 <div class="lg:w-2/5 flex flex-col justify-center gap-12 bg-[#F8F8F9] p-12 rounded-3xl">
                     <div v-for="(feature, index) in solutionData.features" :key="index" class="flex items-center gap-12">
-                        <NuxtImg class="flex-shrink-0" :src="`images/icons/${feature.icon}.svg`" :alt="feature.title" width="62" height="62" />
+                        <NuxtImg class="flex-shrink-0" :src="`images/icons/${feature.icon}.svg`" :alt="feature.title" width="52" height="52" />
                         <h2 class="text-lg lg:text-xl font-semibold">{{ feature.title }}</h2>
                     </div>
                 </div>
             </div>
 
-            <NuxtImg class="w-full my-12 py-12" :src="`images/${solutionData.image1}.png`" :alt="solutionData.title" width="2292" height="1482" />
+            <NuxtImg class="w-full mt-12 pt-12" :src="`images/${solutionData.image1}.png`" :alt="solutionData.title" width="2292" height="1482" />
 		</div>
     </section>
  
@@ -54,8 +54,8 @@
                     <h3 class="text-sm uppercase">Key Benefits</h3>
                     <h2 class="text-xl lg:text-3xl font-semibold">{{ solutionData.benefits.title }}</h2>
                 </div>
-                <div class="flex max-lg:flex-col justify-between gap-4 lg:gap-12 w-full xl:w-4/5 mx-auto mt-12 lg:mt-24 text-center">
-                    <h4 v-for="(item, index) in solutionData.benefits.items" :key="index" class="p-4 lg:p-8 border rounded-3xl text-xl lg:text-3xl font-semibold flex items-center justify-center">{{ item }}</h4>
+                <div class="flex max-lg:flex-col justify-between gap-4 lg:gap-8 w-full xl:w-4/5 mx-auto mt-12 text-center">
+                    <h4 v-for="(item, index) in solutionData.benefits.items" :key="index" class="p-4 lg:p-8 border rounded-3xl text-xl font-semibold flex items-center justify-center">{{ item }}</h4>
                 </div>
             </div>
 
@@ -74,10 +74,10 @@
         </div>
     </section>
 
-    <section v-if="solutionData" class="mt-12 pt-12 pb-56">
+    <section v-if="solutionData" class="mt-12 pb-56">
         <div class="container">
             <div class="flex flex-col gap-24 mt-24">
-				<h3 class="text-xl lg:text-3xl font-semibold text-center">Included Products</h3>
+				<h3 class="text-xl lg:text-3xl font-semibold textcenter">Included Products</h3>
 				<div class="grid lg:grid-cols-3 gap-12">
 					<div v-for="(product, productIndex) in solutionData.products" :key="productIndex" class="flex flex-col justify-between items-center gap-12 py-12 px-4 lg:px-8 text-center bg-[#F8F8F9] rounded-3xl">
 						<div class="flex flex-col justify-center items-center gap-4 w-full">

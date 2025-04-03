@@ -5,7 +5,7 @@
             <div @click="onToggle" class="fixed inset-0 bg-black opacity-70"></div>
             
             <!-- Modal Content -->
-            <div class="flex flex-col justify-between w-11/12 md:w-2/3 lg:w-1/2 lg:h-4/5 overflow-y-auto fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-8 md:py-8 lg:py-16 px-4 md:px-12 lg:px-24 bg-white rounded-3xl shadow-lg">
+            <div class="flex flex-col justify-between w-11/12 md:w-2/3 lg:w-1/2 lg:h-[94%] overflow-y-auto fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-8 md:py-8 lg:py-16 px-4 md:px-12 bg-white rounded-3xl shadow-lg">
                 <!-- <div class="w-11/12 md:w-2/3 lg:w-1/2 h-4/5 overflow-y-auto fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-8 md:py-8 lg:py-16 px-4 md:px-12 lg:px-24 bg-white rounded-3xl shadow-lg"> -->
                 <div>
                     <div class="flex max-lg:flex-col justify-between lg:items-center gap-4">
@@ -13,8 +13,8 @@
                             <h2 class="text-xl lg:text-3xl font-semibold">{{ categoryData.title }}</h2>
                             <h3 class="text-sm font-semibold">
                                 {{ categoryData.sub_categories.length > 1 ? 
-                                    categoryData.sub_categories.map(sub => sub.title.split("-")[0]).join(" - ") : 
-                                    categoryData.sub_categories.map(sub => sub.title).join(" - ") 
+                                    categoryData.sub_categories.map(sub => sub.acronym.split("-")[0]).join(" - ") : 
+                                    categoryData.sub_categories.map(sub => sub.acronym).join(" - ") 
                                 }}
                             </h3>
                         </div>
